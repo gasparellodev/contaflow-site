@@ -4,11 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.145 0 0);
+  --background: #0A1520;
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: #0F1B2A;
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: #0F1B2A;
   --popover-foreground: oklch(0.985 0 0);
 
   /* 🔵 Azul do G */
@@ -37,7 +37,7 @@
   --chart-5: oklch(0.769 0.188 70.08);
 
   --radius: 0.5rem;
-  --sidebar: oklch(0.145 0 0);
+  --sidebar: #0A1520;
   --sidebar-foreground: oklch(0.985 0 0);
 
   --sidebar-primary: #4ECDC4;
@@ -49,11 +49,11 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: #0A1520;
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: #0F1B2A;
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: #0F1B2A;
   --popover-foreground: oklch(0.985 0 0);
 
   --primary: #4ECDC4;
@@ -80,7 +80,7 @@
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
 
-  --sidebar: oklch(0.145 0 0);
+  --sidebar: #0A1520;
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: #4ECDC4;
   --sidebar-primary-foreground: oklch(0.985 0 0);
