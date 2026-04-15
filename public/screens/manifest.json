@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "01-inbox",
+    "title": "Inbox — Pendências",
+    "blurb": "Sua fila do dia — pendências por cliente em prazo fiscal."
+  },
+  {
+    "slug": "02-clientes",
+    "title": "Clientes",
+    "blurb": "Seus clientes com status de pendências, regime e próximo prazo."
+  },
+  {
+    "slug": "03-cliente-detail",
+    "title": "Mercado Vila Verde ME",
+    "blurb": "Visão 360 do cliente — documentos, conversas, lembretes, histórico."
+  },
+  {
+    "slug": "04-documentos",
+    "title": "Documentos — Inbox de NFs",
+    "blurb": "Upload de XML/PDF. IA categoriza. Você revisa em 30s."
+  },
+  {
+    "slug": "05-conversas",
+    "title": "Conversas WhatsApp",
+    "blurb": "Todas as conversas dos clientes em um canal só — com chatbot IA."
+  },
+  {
+    "slug": "06-calendario",
+    "title": "Calendário Fiscal",
+    "blurb": "Matriz obrigação × cliente. Dispara lembretes WhatsApp em massa."
+  },
+  {
+    "slug": "07-chatbot",
+    "title": "Chatbot Config",
+    "blurb": "Treine o chatbot com FAQ contábil e teste em playground."
+  },
+  {
+    "slug": "08-dashboard",
+    "title": "Dashboard — KPIs do escritório",
+    "blurb": "Panorama mensal: clientes, faturamento processado, tempo economizado."
+  },
+  {
+    "slug": "09-auditoria",
+    "title": "Auditoria",
+    "blurb": "Trilha append-only — CRC compliance, quem fez o quê e quando."
+  },
+  {
+    "slug": "10-settings",
+    "title": "Configurações",
+    "blurb": "Sua conta, sócios, integrações e faturamento do escritório."
+  }
+]

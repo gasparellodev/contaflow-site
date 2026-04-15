@@ -1,5 +1,7 @@
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
+import { VideoDemo } from "@/components/video-demo";
+import { ProductShowcase } from "@/components/product-showcase";
 import { AboutSection } from "@/components/about-section";
 import { PlansSection } from "@/components/plans-section";
 import { CtaSection } from "@/components/cta-section";
@@ -11,6 +13,8 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
+        <VideoDemo />
+        <ProductShowcase />
         <AboutSection />
         <PlansSection />
         <CtaSection />

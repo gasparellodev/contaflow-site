@@ -25,3 +25,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Video demo project (not bundled)
+/video-demo/node_modules
+/video-demo/out
+/video-demo/public/voiceover.mp3

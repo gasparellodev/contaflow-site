@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clientes — Contaflow</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;font-variant-numeric:tabular-nums}
+html,body{background:#0A1520;color:#F8FAFC;height:100vh;overflow:hidden}
+.app{display:grid;grid-template-columns:240px 1fr;height:100vh}
+aside{background:#0F1B2A;border-right:1px solid rgba(255,255,255,0.08);padding:20px 12px;display:flex;flex-direction:column;gap:4px}
+.logo{display:flex;align-items:center;gap:8px;padding:4px 8px 16px;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:12px}
+.logo .g{width:28px;height:28px;background:#4ECDC4;border-radius:6px;display:grid;place-items:center;color:#0A1520;font-weight:800;font-size:18px}
+.logo .wm{font-weight:700;font-size:15px;letter-spacing:-0.01em}
+.logo .wm span{color:#4ECDC4}
+nav{display:flex;flex-direction:column;gap:2px}
+nav a{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;color:#94A3B8;text-decoration:none;font-size:13px;font-weight:500}
+nav a.active{background:#4ECDC415;color:#4ECDC4}
+nav a:hover:not(.active){background:#162234;color:#F8FAFC}
+nav .ico{width:16px;height:16px;flex-shrink:0}
+.sidefoot{margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);font-size:12px;color:#64748B}
+main{overflow:hidden;display:flex;flex-direction:column}
+.topbar{padding:16px 32px;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;background:#0A1520}
+.topbar h1{font-size:18px;font-weight:600;letter-spacing:-0.01em}
+.topbar .actions{display:flex;gap:8px}
+.btn{padding:7px 12px;border-radius:6px;font-size:13px;font-weight:500;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.btn-primary{background:#FFB627;color:#0A1520;font-weight:600}
+.btn-secondary{background:#162234;color:#F8FAFC;border:1px solid rgba(255,255,255,0.08)}
+.btn-teal{background:#4ECDC4;color:#0A1520;font-weight:600}
+.content{padding:24px 32px;overflow:auto;flex:1}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.kpi{background:#0F1B2A;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px}
+.kpi .lb{font-size:11px;font-weight:600;color:#94A3B8;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px}
+.kpi .vl{font-size:26px;font-weight:700;letter-spacing:-0.02em}
+.kpi .dt{font-size:12px;color:#4ECDC4;margin-top:4px}
+.kpi .dt.neg{color:#EF4444}
+.card{background:#0F1B2A;border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden}
+.card-hd{padding:14px 18px;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center}
+.card-hd h3{font-size:14px;font-weight:600}
+.card-hd .hint{font-size:12px;color:#94A3B8}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:12px 18px;font-size:11px;font-weight:600;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;border-bottom:1px solid rgba(255,255,255,0.08);background:#0F1B2A}
+td{padding:14px 18px;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.04);color:#F8FAFC}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+td.muted{color:#94A3B8}
+tr:hover td{background:#162234}
+.badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+.badge-ok{background:#4ECDC420;color:#4ECDC4}
+.badge-warn{background:#FFB62720;color:#FFB627}
+.badge-red{background:#EF444420;color:#EF4444}
+.badge-n{background:#162234;color:#94A3B8}
+.pill{padding:2px 10px;border-radius:999px;font-size:11px;font-weight:600;background:#162234;color:#94A3B8}
+.grid2{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.empty{padding:40px;text-align:center;color:#94A3B8}
+.flex{display:flex}
+.gap4{gap:4px}.gap8{gap:8px}.gap12{gap:12px}.gap16{gap:16px}
+.mono{font-family:'Geist Mono',monospace;font-size:12px}
+.avatar{width:28px;height:28px;border-radius:50%;background:#4ECDC440;color:#4ECDC4;display:grid;place-items:center;font-size:11px;font-weight:600}
+</style></head><body><div class="app">
+<aside>
+  <div class="logo"><div class="g">G</div><div class="wm">Conta<span>flow</span></div></div>
+  <nav>
+    <a href="#" class=""><span class="ico">📥</span> Inbox</a>
+    <a href="#" class="active"><span class="ico">👥</span> Clientes</a>
+    <a href="#" class=""><span class="ico">📄</span> Documentos</a>
+    <a href="#" class=""><span class="ico">💬</span> Conversas</a>
+    <a href="#" class=""><span class="ico">📅</span> Calendário Fiscal</a>
+    <a href="#" class=""><span class="ico">🤖</span> Chatbot</a>
+    <a href="#" class=""><span class="ico">📊</span> Dashboard</a>
+    <a href="#" class=""><span class="ico">🛡️</span> Auditoria</a>
+    <a href="#" class=""><span class="ico">⚙️</span> Configurações</a>
+  </nav>
+  <div class="sidefoot"><div style="display:flex;align-items:center;gap:8px"><div class="avatar">VG</div><div><div style="color:#F8FAFC;font-weight:500;font-size:12px">Vinicius G.</div><div style="font-size:11px">Silva & Associados</div></div></div></div>
+</aside>
+<main>
+<div class="topbar"><h1>Clientes</h1>
+<div class="actions"><button class="btn btn-secondary">Importar CSV</button><button class="btn btn-primary">+ Adicionar cliente</button></div>
+</div>
+<div class="content">
+<div class="flex gap8" style="margin-bottom:16px">
+  <input style="flex:1;max-width:320px;padding:8px 12px;border-radius:6px;background:#0F1B2A;border:1px solid rgba(255,255,255,0.08);color:#F8FAFC;font-size:13px" placeholder="Buscar por nome, CNPJ ou pendência…">
+  <button class="btn btn-secondary">Regime tributário ▾</button>
+  <button class="btn btn-secondary">Status ▾</button>
+</div>
+<div class="card">
+<table>
+<thead><tr><th>Cliente</th><th>CNPJ</th><th>Regime</th><th>Pendências</th><th>Próximo prazo</th><th>Último contato</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><div style="font-weight:600">Mercado Vila Verde ME</div></td><td class="mono">15.234.567/0001-82</td><td>Simples</td><td class="num"><span class="badge badge-red">4</span></td><td>DAS 20/04</td><td class="muted">Hoje 11:02</td><td><span class="badge badge-ok">Ativo</span></td></tr>
+<tr><td><div style="font-weight:600">Padaria do Zé Ltda</div></td><td class="mono">28.456.789/0001-51</td><td>Lucro Presumido</td><td class="num"><span class="badge badge-warn">2</span></td><td>DCTF 22/04</td><td class="muted">Ontem 16:30</td><td><span class="badge badge-ok">Ativo</span></td></tr>
+<tr><td><div style="font-weight:600">Tech4Good Consultoria</div></td><td class="mono">41.892.103/0001-70</td><td>Lucro Real</td><td class="num"><span class="badge badge-warn">3</span></td><td>SPED 30/04</td><td class="muted">3 dias atrás</td><td><span class="badge badge-ok">Ativo</span></td></tr>
+<tr><td><div style="font-weight:600">Dra. Mariana Oliveira</div></td><td class="mono">15.678.432/0001-05</td><td>Simples</td><td class="num"><span class="badge badge-n">0</span></td><td>DAS 20/04</td><td class="muted">5 dias atrás</td><td><span class="badge badge-ok">Ativo</span></td></tr>
+<tr><td><div style="font-weight:600">Café da Praça SP Ltda</div></td><td class="mono">52.014.981/0001-34</td><td>Simples</td><td class="num"><span class="badge badge-warn">1</span></td><td>DCTF 22/04</td><td class="muted">6 dias atrás</td><td><span class="badge badge-ok">Ativo</span></td></tr>
+<tr><td><div style="font-weight:600">Estúdio Moldura & Arte</div></td><td class="mono">09.113.562/0001-22</td><td>MEI</td><td class="num"><span class="badge badge-n">0</span></td><td>DAS MEI 20/04</td><td class="muted">2 semanas</td><td><span class="badge badge-ok">Ativo</span></td></tr>
+<tr><td><div style="font-weight:600">Oficina Pedro Motos</div></td><td class="mono">72.341.092/0001-18</td><td>Simples</td><td class="num"><span class="badge badge-warn">1</span></td><td>DAS 20/04</td><td class="muted">1 semana</td><td><span class="badge badge-ok">Ativo</span></td></tr>
+<tr><td><div style="font-weight:600">Clínica Viva Saúde</div></td><td class="mono">37.829.501/0001-96</td><td>Lucro Presumido</td><td class="num"><span class="badge badge-n">0</span></td><td>DCTF 22/04</td><td class="muted">Hoje 08:15</td><td><span class="badge badge-ok">Ativo</span></td></tr>
+<tr><td><div style="font-weight:600">João Paulo Soares ME</div></td><td class="mono">18.290.374/0001-48</td><td>Simples</td><td class="num"><span class="badge badge-n">0</span></td><td>DAS 20/04</td><td class="muted">3 dias atrás</td><td><span class="badge badge-n">Pausado</span></td></tr>
+</tbody>
+</table>
+</div>
+<div style="margin-top:16px;color:#94A3B8;font-size:12px;display:flex;justify-content:space-between"><span>Mostrando 9 de 32 clientes</span><span>Página 1 de 4 · Anterior · Próximo</span></div>
+</div>
+</main>
+</div></body></html>
