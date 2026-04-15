@@ -16,11 +16,11 @@ type Offer = {
 const offers: Offer[] = [
   {
     slug: "sprint-express",
-    name: "Sprint Express 48h",
+    name: "Diagnóstico Express 48h",
     price: "R$ 997",
     priceSub: "à vista (PIX/Asaas)",
     desc:
-      "Auditoria enxuta com 3 quick-wins de automação — entregue em 48 horas.",
+      "3 quick-wins de automação mapeados em 1 cliente seu · relatório priorizado em 48h.",
     features: [
       "1 reunião de 1 hora",
       "Relatório de 5 páginas em 48h",
@@ -56,7 +56,7 @@ const offers: Offer[] = [
     desc:
       "Plataforma completa para escritórios com até 50 clientes ativos.",
     features: [
-      "1º mês grátis até 30/04",
+      "1º mês grátis se fechar até 30/05/2026",
       "Categorização automática de NFs",
       "Lembretes WhatsApp por cliente",
       "Chatbot white-label",
