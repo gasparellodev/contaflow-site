@@ -1,6 +1,10 @@
 export function Footer() {
   return (
-    <footer className="bg-[#070E17] border-t border-white/5 py-16">
+    <footer className="relative bg-[#040810] py-16">
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#4ECDC4]/40 to-transparent"
+      />
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
@@ -90,11 +94,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row md:justify-between gap-3 text-xs text-white/35">
-          <p>© 2026 Contaflow. Todos os direitos reservados.</p>
+        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row md:justify-between gap-3 text-xs text-white/35 font-mono">
+          <p>© 2026 Contaflow · Built by GaspLab · Rio de Janeiro</p>
           <p>
-            Dados em conformidade com a LGPD · Métricas são de pilotos
-            internos · Ambiente Asaas sandbox em testes
+            LGPD · Métricas de pilotos internos · Asaas sandbox
           </p>
         </div>
       </div>

@@ -1,29 +1,27 @@
 import { Header } from "@/components/header";
-import { HeroSection } from "@/components/hero-section";
-import { AboutSection } from "@/components/about-section";
-import { VideoDemo } from "@/components/video-demo";
-import { ProductShowcase } from "@/components/product-showcase";
-import { SocialProof } from "@/components/social-proof";
-import { PlansSection } from "@/components/plans-section";
+import { HeroCinematic } from "@/components/hero-cinematic";
+import { BentoLive } from "@/components/bento-live";
+import { ScrollStory } from "@/components/scroll-story";
+import { VideoShowcase } from "@/components/video-showcase";
+import { SocialProofPremium } from "@/components/social-proof-premium";
+import { PricingAttio } from "@/components/pricing-attio";
 import { FaqSection } from "@/components/faq-section";
-import { CtaSection } from "@/components/cta-section";
+import { CtaFinal } from "@/components/cta-final";
 import { Footer } from "@/components/footer";
-import { ScrollReveal } from "@/components/scroll-reveal";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
-      <ScrollReveal />
+    <div className="min-h-screen bg-[#050B15]">
       <Header />
       <main>
-        <HeroSection />
-        <AboutSection />
-        <VideoDemo />
-        <ProductShowcase />
-        <SocialProof />
-        <PlansSection />
+        <HeroCinematic />
+        <BentoLive />
+        <ScrollStory />
+        <VideoShowcase />
+        <SocialProofPremium />
+        <PricingAttio />
         <FaqSection />
-        <CtaSection />
+        <CtaFinal />
       </main>
       <Footer />
     </div>

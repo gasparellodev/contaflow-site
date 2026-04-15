@@ -1,6 +1,8 @@
 import type React from "react";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { LenisProvider } from "@/components/lenis-provider";
+import { Grain } from "@/components/ui/grain";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,6 +15,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-geist-mono",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-instrument-serif",
 });
 
 export const metadata = {
@@ -136,7 +146,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased dark`}
     >
       <head>
         <script
@@ -151,6 +161,8 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          <LenisProvider />
+          <Grain />
           {children}
         </ThemeProvider>
       </body>
