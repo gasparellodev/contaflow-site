@@ -1,7 +1,4 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 export function HeroSection() {
   const sprintLink = "https://sandbox.asaas.com/c/aht15kd7eyewvenu";
@@ -11,49 +8,59 @@ export function HeroSection() {
   return (
     <section
       id="produtos"
-      className="relative py-24 md:py-36 overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(15,76,92,0.85), rgba(26,43,95,0.9)), url('/contaflow-hero.jpeg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="relative overflow-hidden bg-[#0A1520]"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0F4C5C]/60 via-[#1A2B5F]/70 to-black/85 -z-10"></div>
+      {/* Background image — dashboard mockup sem texto embarcado */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-70"
+        style={{ backgroundImage: "url('/contaflow-hero-v2.jpeg')" }}
+        aria-hidden
+      />
+      {/* Overlay gradiente sutil: escurece mais a esquerda (onde fica o texto) */}
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-[#0A1520] via-[#0A1520]/80 to-transparent"
+        aria-hidden
+      />
 
-      <div className="container relative z-10 mx-auto px-4 max-w-5xl">
-        <Badge className="bg-[#4ECDC4]/20 text-[#4ECDC4] border-[#4ECDC4]/40 mb-6 text-xs tracking-wider">
-          BETA FECHADO • EARLY ADOPTERS
-        </Badge>
-        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight max-w-4xl">
-          Contabilidade que roda sozinha — com IA que respeita a LGPD
-        </h1>
-        <p className="mt-6 text-lg md:text-xl text-white/90 max-w-3xl">
-          Categorização automática de notas fiscais, lembretes fiscais por cliente
-          via WhatsApp e chatbot que responde dúvidas. Implementamos em 48h no seu
-          escritório.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-4">
-          <Button
-            asChild
-            size="lg"
-            className="bg-[#FFB627] hover:bg-[#ffc43d] text-[#0F172A] font-semibold"
-          >
-            <a href={sprintLink} target="_blank" rel="noopener noreferrer">
-              Sprint Express 48h — R$ 997
-            </a>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="border-white/40 text-white hover:bg-white/10"
-          >
-            <a href={demoLink} target="_blank" rel="noopener noreferrer">
-              Agendar demo
-            </a>
-          </Button>
+      <div className="container relative z-10 mx-auto px-6 py-24 md:py-36 max-w-6xl">
+        <div className="max-w-2xl">
+          <span className="inline-block text-xs font-semibold tracking-[0.2em] text-[#4ECDC4] uppercase mb-6">
+            Beta fechado · Early adopters
+          </span>
+          <h1 className="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight">
+            Contabilidade que{" "}
+            <span className="text-[#4ECDC4]">roda sozinha</span>
+          </h1>
+          <p className="mt-6 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">
+            IA que categoriza NFs em 30 segundos, envia lembretes fiscais por
+            cliente via WhatsApp e responde dúvidas sem você sair do lugar.
+            Implantação em 48 horas.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#FFB627] hover:bg-[#ffc43d] text-[#0A1520] font-semibold"
+            >
+              <a href={sprintLink} target="_blank" rel="noopener noreferrer">
+                Sprint Express 48h — R$ 997
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/20 bg-transparent text-white hover:bg-white/5 hover:text-white"
+            >
+              <a href={demoLink} target="_blank" rel="noopener noreferrer">
+                Agendar demo
+              </a>
+            </Button>
+          </div>
+          <p className="mt-8 text-xs text-white/40 max-w-lg">
+            Dados tratados em conformidade com a LGPD. Métricas de pilotos
+            internos — resultados variam por escritório.
+          </p>
         </div>
       </div>
     </section>

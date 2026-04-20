@@ -16,16 +16,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Contaflow — Automação Contábil com IA | GaspLab",
+  metadataBase: new URL("https://contaflow.gasplab.com.br"),
+  title: "Contaflow — Automação contábil com IA",
   description:
-    "Automação contábil com IA para escritórios brasileiros. Categorização automática de NFs, lembretes fiscais via WhatsApp e chatbot. Implementação em 48h.",
+    "Categorização automática de NFs, lembretes fiscais por cliente via WhatsApp e chatbot para seu escritório contábil. Implantação em 48h. Dados em conformidade com a LGPD.",
   openGraph: {
-    title: "Contaflow — Automação Contábil com IA",
+    title: "Contaflow — Automação contábil com IA",
     description:
-      "Implementação em 48h. Reduza horas de lançamentos com IA que respeita a LGPD.",
+      "Devolva 5–10h por semana ao seu escritório. Implantação em 48h, sem dependência.",
     images: ["/contaflow-og.jpeg"],
+    locale: "pt_BR",
+    type: "website",
   },
-  generator: "GaspLab",
+  icons: {
+    icon: "/favicon-contaflow.png",
+  },
 };
 
 export default function RootLayout({
